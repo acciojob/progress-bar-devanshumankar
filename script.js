@@ -1,6 +1,7 @@
 const nextButton = document.querySelector("#next");
         let currentActiveElement = document.querySelector("#circle-1");
         const prevButton = document.querySelector("#prev");
+		prevButton.style.display="none"
         nextButton.addEventListener("click", () => {
             if (currentActiveElement.id == "circle-5") nextButton.style.display = "none";
             else {
