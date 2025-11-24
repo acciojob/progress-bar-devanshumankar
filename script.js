@@ -1,10 +1,18 @@
 const nextButton = document.querySelector("#next");
         let currentActiveElement = document.querySelector("#circle-1");
         const prevButton = document.querySelector("#prev");
-		prevButton.style.display="none"
+		prevButton.style.display="none";
+		const parentElement = currentActiveElement.parentElement;
+
+		Array.from(parentElement.children).forEach((ele) => {
+		    ele.classList.remove("temp");
+		});
+
         nextButton.addEventListener("click", () => {
+			
             if (currentActiveElement.id == "circle-5") nextButton.style.display = "none";
             else {
+				prevButton.setAttribute("disable",false);
                 prevButton.style.display = "inline"
                 currentActiveElement.nextElementSibling.classList.add("active");
                 currentActiveElement = currentActiveElement.nextElementSibling;
