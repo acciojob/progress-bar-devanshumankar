@@ -1,1 +1,13 @@
 /*  your css code here. If applicable */
+.active{
+	background-color:red;
+	height:100px;
+	width:100px;
+}
+.container{
+	display:flex;
+	gap:4px;
+}
+#prev{
+	display:none;
+}
